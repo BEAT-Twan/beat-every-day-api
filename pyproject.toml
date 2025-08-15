@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "beat-every-day"
+version = "0.1.0"
+description = "BEAT Every Day — Strava-first MVP (FastAPI + Postgres)"
+authors = ["BEAT Cycling Club"]
+readme = "README.md"
+packages = [{include = "app"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.111.0"
+uvicorn = "^0.29.0"
+sqlalchemy = "^2.0.30"
+psycopg = {version = "^3.1.18", extras = ["binary"]}
+alembic = "^1.13.1"
+httpx = "^0.27.0"
+pydantic-settings = "^2.2.1"
+python-dotenv = "^1.0.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
